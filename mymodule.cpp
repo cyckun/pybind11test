@@ -1,5 +1,5 @@
 #include <pybind11/pybind11.h>
-#include "mock.hpp"
+#include "mock/mock.hpp"
 
 // int add(int a, int b)
 // {
