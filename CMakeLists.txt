@@ -4,9 +4,8 @@ project(pybind_test VERSION 0.1.0)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 add_subdirectory(pybind11)
-
-add_library(psimock mock/mock.cpp)
+add_subdirectory(mock)
 
 pybind11_add_module(mymodule mymodule.cpp)
 target_link_libraries(mymodule PRIVATE psimock)
-target_link_directories(mymodule PRIVATE mock/mock.hpp)
+# target_link_directories(mymodule PRIVATE mock/mock.hpp)
